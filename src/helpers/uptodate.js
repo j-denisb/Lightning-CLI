@@ -48,6 +48,8 @@ const upToDate = async (skip = true) => {
   if (process.env.LNG_AUTO_UPDATE !== undefined) {
     skip = process.env.LNG_AUTO_UPDATE === 'false' ? true : false
   }
+  
+  console.log('Skipping auto update', skip, process.env.LNG_AUTO_UPDATE)
   if (skip === true) {
     return true
   }
